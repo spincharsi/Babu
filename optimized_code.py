@@ -85,14 +85,17 @@ def efficient_dictionary_get(dictionary, keys):
     return [dictionary.get(key, None) for key in keys]
 
 
-def efficient_file_operations():
+def efficient_file_operations(file_path="/tmp/example.txt"):
     """
     FAST: Opening file once and performing all operations.
     Performance gain: Dramatically faster by minimizing I/O operations.
+    
+    Args:
+        file_path: Path to write the file (default: /tmp/example.txt)
     """
     data = ["line 1\n", "line 2\n", "line 3\n"]
     # Open file once and write all data
-    with open("/tmp/example.txt", "w") as f:
+    with open(file_path, "w") as f:
         f.writelines(data)
 
 

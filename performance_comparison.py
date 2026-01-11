@@ -59,10 +59,13 @@ def main():
     print("PERFORMANCE COMPARISON: SLOW vs OPTIMIZED CODE")
     print("=" * 70)
 
+    # Constants
+    DATA_MULTIPLIER = 100  # Multiplier to make test data larger for better benchmarking
+
     # Test data
     test_items = list(range(1000))
     test_search = list(range(500, 1500))
-    test_duplicates = [1, 2, 3, 2, 4, 5, 3, 6, 1] * 100  # Make it bigger for better comparison
+    test_duplicates = [1, 2, 3, 2, 4, 5, 3, 6, 1] * DATA_MULTIPLIER  # Make it bigger for better comparison
     test_numbers = list(range(-100, 100))
     test_dict = {i: i * 2 for i in range(1000)}
     test_keys = list(range(0, 1500))

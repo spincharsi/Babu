@@ -94,14 +94,17 @@ def inefficient_dictionary_get(dictionary, keys):
     return result
 
 
-def inefficient_file_operations():
+def inefficient_file_operations(file_path="/tmp/example.txt"):
     """
     SLOW: Opening and closing files multiple times.
+    
+    Args:
+        file_path: Path to write the file (default: /tmp/example.txt)
     """
     data = ["line 1\n", "line 2\n", "line 3\n"]
     for line in data:
         # Opening file in each iteration is expensive
-        with open("/tmp/example.txt", "a") as f:
+        with open(file_path, "a") as f:
             f.write(line)
 
 
