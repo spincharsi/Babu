@@ -4,7 +4,6 @@ This demonstrates the actual performance improvements achieved.
 """
 
 import time
-import sys
 from slow_code_example import (
     inefficient_string_concatenation,
     inefficient_list_membership_check,
